@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+  --accent-rgb: 0, 0, 0;
+  --border-rgb: 220, 220, 220;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-feature-settings: "ss01", "ss02", "cv01", "cv03";
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  * {
+    border-color: rgba(var(--border-rgb), 0.12);
+  }
+}
+
+@layer utilities {
+  .minimalist-card {
+    background-color: rgba(var(--foreground-rgb), 0.02);
+    border: 1px solid rgba(var(--foreground-rgb), 0.08);
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .minimalist-card:hover {
+    border-color: rgba(var(--foreground-rgb), 0.15);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(90deg, #000000, #333333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
